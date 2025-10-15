@@ -78,3 +78,10 @@ TEST(HideSecretTest, SecretInTheMiddleOfText)
     ASSERT_NO_THROW(hide_secret(text.data(), "is my "));
     EXPECT_EQ(text, "12345678 xxxxxxpassword");
 }
+
+TEST(HideSecret, SeveralMatches)
+{
+    std::string text{"123 is my password, yes, 123, and nothing else"};
+    ASSERT_NO_THROW(hide_secret(text.data(), "123"));
+    EXPECT_EQ(text, "xxx is my password, yes, xxx, and nothing else");
+}
