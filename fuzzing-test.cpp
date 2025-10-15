@@ -4,7 +4,7 @@
 #include <span>
 #include <string>
 
-#include "hide_secret.hpp"
+#include "hide-secret.hpp"
 
 extern "C" int LLVMFuzzerTestOneInput(const std::uint8_t* data,
     std::size_t size)

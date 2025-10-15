@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 
-#include "hide_secret.hpp"
+#include "hide-secret.hpp"
 
 
 int main(int argc, char** argv)

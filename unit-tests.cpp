@@ -2,7 +2,7 @@
 
 #include <string>
 
-#include "hide_secret.hpp"
+#include "hide-secret.hpp"
 
 TEST(HideSecretTest, BasicTest)
 {
