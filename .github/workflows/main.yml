@@ -20,7 +20,7 @@ jobs:
 
     - name: Compile
       run: |
-        cmake -B build/
+        cmake -B build/ -DWITH_TESTS=ON
         cmake --build build/
 
     - name: SAST
