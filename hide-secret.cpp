@@ -13,7 +13,7 @@ void check_and_change(char* const text, const char* const secret, const int shif
     i = 0;
     while (secret[i] != '\0')
     {
-        text[i + shift] = '*';
+        text[i + shift] = 'x';
         i++;
     }
 }
