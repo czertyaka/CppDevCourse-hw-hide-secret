@@ -85,3 +85,10 @@ TEST(HideSecret, SeveralMatches)
     ASSERT_NO_THROW(hide_secret(text.data(), "123"));
     EXPECT_EQ(text, "xxx is my password, yes, xxx, and nothing else");
 }
+
+TEST(HideSecret, OverlappingMatches)
+{
+    std::string text{"My password is not aaaa"};
+    ASSERT_NO_THROW(hide_secret(text.data(), "aaa"));
+    EXPECT_EQ(text, "My password is not xxxx");
+}
